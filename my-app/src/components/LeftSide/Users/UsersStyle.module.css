@@ -56,3 +56,11 @@
     height: 25px;
     background-size: cover;
 }
+
+.lastMessage{
+    margin: 0;
+    width: 150px;
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

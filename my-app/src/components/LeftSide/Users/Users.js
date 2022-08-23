@@ -8,6 +8,7 @@ const Users = () => {
 
     const Users = useSelector(state => state.UserReducer.users)
     const dispatch = useDispatch();
+    const Messages = useSelector(state => state.MessagesReducer)
 
     return (
         <div className={US.contacts}>
@@ -21,7 +22,7 @@ const Users = () => {
                             <img className={US.photo} src={e.img} alt="user" />
                             <div>
                                 <h4>{e.name}</h4>
-                                <p>text</p>
+                                <p className={US.lastMessage}>{Messages[`${e.id}`].slice(-1)[0].text}</p>
                             </div>
 
                         </div>
