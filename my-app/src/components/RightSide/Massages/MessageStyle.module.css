@@ -4,8 +4,9 @@
     border-left: 1px solid #dadada;
     display: flex;
     flex-direction: column;
-    /*overflow: scroll;*/
-    /*overflow-x: hidden;*/
+    overflow: scroll;
+    overflow-x: hidden;
+    height:625px ;
 }
 
 .smsMe{
