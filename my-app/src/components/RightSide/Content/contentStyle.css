@@ -1,0 +1,8 @@
+.content{
+    display: grid;
+    grid-area: c;
+    grid-template-areas: "head" "message" "mess";
+    grid-template-rows: 2fr 10fr 2fr;
+
+
+}

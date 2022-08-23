@@ -1,0 +1,58 @@
+.contacts{
+    grid-area: chats;
+
+    padding-top: 20px;
+    border-top: 1px solid #dadada;
+}
+
+.title{
+    margin: 0;
+    font-family: Bahnschrift;
+    font-weight: 300;
+    color: #0d9ddc;
+    margin: 0px 0px 20px 20px;
+}
+
+.scrollBlock{
+
+    /*overflow: scroll;*/
+    /*overflow-x: hidden;*/
+}
+
+.usersList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dadada;
+    cursor: pointer;
+}
+
+.person{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+}
+
+.data{
+    margin: 20px;
+}
+
+.photo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.person:before{
+    content: "";
+    position: absolute;
+    bottom:15px;
+    left: 44px;
+    background-image: url("https://cdn2.iconfinder.com/data/icons/thin-line-color-1/21/10-512.png");
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}

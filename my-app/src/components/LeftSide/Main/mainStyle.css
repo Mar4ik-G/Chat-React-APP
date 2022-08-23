@@ -1,0 +1,7 @@
+.main {
+    grid-area: m;
+    display: grid;
+    grid-template-areas: "head"
+    "chats";
+    grid-template-rows: 3fr 10fr;
+}

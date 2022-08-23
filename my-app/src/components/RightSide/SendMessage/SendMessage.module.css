@@ -1,0 +1,36 @@
+.sendMessage{
+    grid-area: mess;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-top: 1px solid #dadada;
+    padding-top: 15px;
+    border-left: 1px solid #dadada;
+
+}
+
+.castomInput {
+    width: 90%;
+    position: relative;
+    margin: 15px;
+}
+
+.castomInput:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    bottom: 0;
+    right: 13%;
+    width: 25px;
+    height: 25px;
+    background: url('https://cdn2.iconfinder.com/data/icons/network-communications-glyph/32/send_message_telegram_paperplane_plane-512.png') no-repeat;
+    background-size: cover;
+}
+
+.searchInput {
+    width: 85%;
+    height: 30px;
+    border:1px solid gray;
+    border-radius: 15px;
+    padding: 5px 0px 5px 35px;
+}

@@ -1,0 +1,59 @@
+.header {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    grid-area: head;
+}
+
+
+.user{
+    width: 60px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.userBlock{
+    position: relative;
+}
+
+.userBlock:before{
+    content: "";
+    position: absolute;
+    bottom: 17px;
+    left: 65px;
+    background-image: url("https://cdn2.iconfinder.com/data/icons/thin-line-color-1/21/10-512.png");
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+
+
+.castomInput {
+    position: relative;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.castomInput:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     margin: auto 0;
+     width: 25px;
+     height: 25px;
+    margin-left: 10px;
+     background: url('https://i0.wp.com/www.thinkafrica.fi/wp-content/uploads/2019/04/search-icon.png?fit=1200%2C1200&ssl=1&w=640') no-repeat;
+     background-size: cover;
+ }
+
+.searchInput {
+    width: 85%;
+    height: 30px;
+    border:1px solid gray;
+    border-radius: 100px;
+    padding: 5px 0px 5px 35px;
+}
+
+

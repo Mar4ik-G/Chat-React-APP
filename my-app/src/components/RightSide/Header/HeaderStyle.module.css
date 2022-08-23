@@ -1,0 +1,43 @@
+.header {
+    grid-area: head;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+
+    border-bottom: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+}
+
+
+.user{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.nickName{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-family: Bahnschrift;
+    font-weight: 300;
+}
+
+.userBlock{
+
+    position: relative;
+}
+
+.userBlock:before{
+    content: "";
+    position: absolute;
+    bottom: 17px;
+    left: 65px;
+    background-image: url("https://cdn2.iconfinder.com/data/icons/thin-line-color-1/21/10-512.png");
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+

@@ -1,0 +1,46 @@
+.content{
+    grid-area: message;
+    padding: 10px;
+    border-left: 1px solid #dadada;
+    display: flex;
+    flex-direction: column;
+}
+
+.smsMe{
+    max-width: 60%;
+    min-height: 40px;
+    margin-top: 30px;
+    display: flex;
+    background-color: #c8c8c8;
+    color: #05101c;
+    margin-left:  auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 40px;
+
+}
+
+.smsNotMe{
+    display: flex;
+    background-color: #150615;
+    color: white;
+    margin-left: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+    min-height: 40px;
+    margin-top: 30px;
+    margin-right: auto;
+
+}
+
+.blockForImgAndText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.photo{
+    width: 50px;
+    height: 50px;
+}
