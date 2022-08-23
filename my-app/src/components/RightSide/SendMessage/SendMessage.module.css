@@ -12,7 +12,9 @@
 .castomInput {
     width: 90%;
     position: relative;
-    margin: 15px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
 }
 
 .castomInput:before {
@@ -20,7 +22,7 @@
     position: absolute;
     top: 8px;
     bottom: 0;
-    right: 13%;
+    right: 8%;
     width: 25px;
     height: 25px;
     background: url('https://cdn2.iconfinder.com/data/icons/network-communications-glyph/32/send_message_telegram_paperplane_plane-512.png') no-repeat;
