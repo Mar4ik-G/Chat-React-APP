@@ -11,13 +11,17 @@ const Messages = () => {
     return (
         <div className={MS.content}>
             {id? Messages[`${id}`].map(e =>  e.Me?
-                <div key={e.index} className={MS.smsMe}>{e.text}</div> :
+                <div className={MS.blockForImgAndTextme}>
+                    <div key={e.index} className={MS.smsMe}>{e.text}<p className={MS.dateM}>{new Date(e.date).getHours() >= 12? e.date + " PM" : e.date + " AM" }</p></div>
+                </div> :
 
                 <div  key={e.index}  className={MS.blockForImgAndText}>
                     <img className={MS.photo} src={infoUser[`${id-1}`].img} alt=""/>
                     <div className={MS.smsNotMe}>
                         {e.text}
+                        <p className={MS.date}>{new Date(e.date).getHours() > 12? e.date + " PM" : e.date + " AM"}</p>
                     </div>
+
                 </div>)
 
                 : null}
