@@ -5,10 +5,14 @@ import {addId} from "../../../redux/reducers/UserReducer";
 
 
 const Users = () => {
-
+    const indexof = useSelector(state => state.UserReducer.indexof)
     const Users = useSelector(state => state.UserReducer.users)
     const dispatch = useDispatch();
     const Messages = useSelector(state => state.MessagesReducer)
+
+    let users = Users.filter(function(item,index,arr){
+        return item.name.indexOf(`${indexof}`) != -1
+    })
 
     return (
         <div className={US.contacts}>
@@ -16,7 +20,9 @@ const Users = () => {
 
             <div className={US.scrollBlock}>
 
-                {Users.map(e =>
+
+
+                {users.map(e =>
                     <div className={US.usersList} key={e.id} onClick={() => dispatch(addId(e.id))}>
                         <div className={US.person}>
                             <img className={US.photo} src={e.img} alt="user" />

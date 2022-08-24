@@ -4,6 +4,7 @@ import {createSlice} from "@reduxjs/toolkit";
     name:"UserReducer",
     initialState:{
         id:null,
+        indexof:'',
         users: [
             {
                 id:1,
@@ -34,9 +35,13 @@ import {createSlice} from "@reduxjs/toolkit";
      reducers:{
          addId(state,action){
              state.id =  action.payload
+         },
+         addIndexOf(state,action){
+             state.indexof = action.payload
          }
      }
 })
 
+
 export default UserReducer.reducer
-export const {addId} = UserReducer.actions
+export const {addId,addIndexOf} = UserReducer.actions
