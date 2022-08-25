@@ -9,3 +9,15 @@
 html,body{
     height: 100%;
 }
+
+@media screen and (max-width: 768px){
+   .App{
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-areas: 'm '
+   "c";
+       height: 100%;
+   }
+
+
+}

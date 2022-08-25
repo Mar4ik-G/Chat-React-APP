@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import US from './UsersStyle.module.css'
 import {useDispatch, useSelector} from "react-redux";
-import {addDate, addId, sortArr,} from "../../../redux/reducers/UserReducer";
+import { addId, sortArr,} from "../../../redux/reducers/UserReducer";
 
 
 const Users = () => {
@@ -32,7 +32,7 @@ const Users = () => {
                         <div className={US.person}>
                             <img className={US.photo} src={e.img} alt="user" />
                             <div>
-                                <h4  style={{marginBottom:'2px'}}>{e.name}</h4>
+                                <h4  className={US.name}>{e.name}</h4>
                                 <p className={US.lastMessage}>{Messages[`${e.id}`].slice(-1)[0].text}</p>
                             </div>
 

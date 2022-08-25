@@ -40,7 +40,7 @@ const SendMessage = () => {
 
     return (
         <div className={SMStyle.sendMessage}>
-            <div className={SMStyle.castomInput}>
+            <div className={SMStyle.customInput}>
                 <input
                     className={SMStyle.searchInput}
                     type="text"

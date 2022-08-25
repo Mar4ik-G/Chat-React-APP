@@ -1,10 +1,10 @@
 import React from 'react';
 import MS from './MessageStyle.module.css'
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 const Messages = () => {
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const id = useSelector(state => state.UserReducer.id)
     const infoUser = useSelector(state => state.UserReducer.usersWithoutDate)
     const Messages = useSelector(state => state.MessagesReducer)

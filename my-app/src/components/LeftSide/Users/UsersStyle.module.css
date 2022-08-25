@@ -10,7 +10,7 @@
     font-family: Bahnschrift;
     font-weight: 300;
     color: #0d9ddc;
-    margin: 0px 0px 20px 20px;
+    margin: 20px 0px 20px 20px;
 }
 
 .scrollBlock{
@@ -25,6 +25,11 @@
     align-items: center;
     border-bottom: 1px solid #dadada;
     cursor: pointer;
+}
+
+.name{
+    margin-bottom: 2px;
+    font-weight: 400;
 }
 
 .person{
@@ -58,6 +63,7 @@
 }
 
 .lastMessage{
+    color: #9e9e9e;
     margin: 0;
     width: 230px;
     height: 45px;

@@ -8,17 +8,17 @@ import {createSlice} from "@reduxjs/toolkit";
         usersWithoutDate: [
             {
                 id:1,
-                img:'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80',
+                img:'https://cdn.maximonline.ru/28/f8/71/28f871cd2aefb92c8c41e108797cde7b/728x728_1_9be45a93039fc399f9055684f9d08baa@1024x1024_0xac120002_10429326581550233820.jpg',
                 name:'Alice Freeman',
             },
             {
                 id:2,
-                img:'https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2018-09/shutterstock_648907024.jpg?itok=7lrLYx-B',
+                img:'https://www.komarov.design/content/images/2020/11/image-4.jpeg',
                 name:'Josefina',
             },
             {
                 id:3,
-                img:'https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock--480x320.jpg',
+                img:'https://rugraphics.ru/wp-content/uploads/licza-lyudej.png',
                 name:'Velazquez',
             },
             {
@@ -30,19 +30,19 @@ import {createSlice} from "@reduxjs/toolkit";
         users: [
             {
                 id:1,
-                img:'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80',
+                img:'https://cdn.maximonline.ru/28/f8/71/28f871cd2aefb92c8c41e108797cde7b/728x728_1_9be45a93039fc399f9055684f9d08baa@1024x1024_0xac120002_10429326581550233820.jpg',
                 name:'Alice Freeman',
                 date:1661450220764,
             },
             {
                 id:2,
-                img:'https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2018-09/shutterstock_648907024.jpg?itok=7lrLYx-B',
+                img:'https://www.komarov.design/content/images/2020/11/image-4.jpeg',
                 name:'Josefina',
                 date:1661450220764,
             },
             {
                 id:3,
-                img:'https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock--480x320.jpg',
+                img:'https://rugraphics.ru/wp-content/uploads/licza-lyudej.png',
                 name:'Velazquez',
                 date:1661450220764,
             },
@@ -72,7 +72,6 @@ import {createSlice} from "@reduxjs/toolkit";
          },
          sortArr(state){
              state.users.sort(function(a,b){
-
                  return (b.date) - (a.date);
              });
          }

@@ -30,8 +30,8 @@
 
 .castomInput {
     position: relative;
-    margin-left: 15px;
     margin-bottom: 15px;
+
 }
 
 .castomInput:before {
@@ -43,7 +43,7 @@
      margin: auto 0;
      width: 25px;
      height: 25px;
-    margin-left: 10px;
+    margin-left: 18px;
      background: url('https://i0.wp.com/www.thinkafrica.fi/wp-content/uploads/2019/04/search-icon.png?fit=1200%2C1200&ssl=1&w=640') no-repeat;
      background-size: cover;
  }
@@ -51,6 +51,7 @@
 .searchInput {
     width: 85%;
     height: 30px;
+    margin-left: 10px;
     border:1px solid gray;
     border-radius: 100px;
     padding: 5px 0px 5px 35px;
