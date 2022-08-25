@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import US from './UsersStyle.module.css'
 import {useDispatch, useSelector} from "react-redux";
-import {addId,} from "../../../redux/reducers/UserReducer";
+import {addId, sortArr,} from "../../../redux/reducers/UserReducer";
 
 
 const Users = () => {
@@ -10,6 +10,10 @@ const Users = () => {
     const Users = useSelector(state => state.UserReducer.users)
     const dispatch = useDispatch();
     const Messages = useSelector(state => state.MessagesReducer)
+
+    useEffect(()=>{
+        dispatch(sortArr())
+    })
 
 
     let users = Users.filter(function(item,index,arr){
