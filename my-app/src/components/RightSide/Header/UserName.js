@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 const UserName = () => {
 
     const id = useSelector(state => state.UserReducer.id)
-    const infoUser = useSelector(state => state.UserReducer.users)
+    const infoUser = useSelector(state => state.UserReducer.usersWithoutDate)
 
 
     return (

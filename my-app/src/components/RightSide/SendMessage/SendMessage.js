@@ -3,7 +3,7 @@ import SMStyle from "./SendMessage.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {addMessage} from "../../../redux/reducers/MessagesReducer";
 import axios from "axios";
-import {addDate, addId, sortArr} from "../../../redux/reducers/UserReducer";
+import {addDate, sortArr} from "../../../redux/reducers/UserReducer";
 
 const SendMessage = () => {
 

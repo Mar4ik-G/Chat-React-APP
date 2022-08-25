@@ -23,10 +23,15 @@ const MessagesReducer =createSlice({
     reducers:{
         addMessage(state,action){
             state[action.payload[1]].push(action.payload[0])
+            // addInfo(state,'chat')
         },
+        // changeMess(state,action){
+        //     debugger
+        //     state = action.payload.message;
+        // }
     }
 
 })
 
-export const {addMessage} = MessagesReducer.actions
+export const {addMessage,changeMess} = MessagesReducer.actions
 export default MessagesReducer.reducer

@@ -1,12 +1,22 @@
 import React from 'react';
 import MS from './MessageStyle.module.css'
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 const Messages = () => {
 
+    const dispatch = useDispatch();
     const id = useSelector(state => state.UserReducer.id)
-    const infoUser = useSelector(state => state.UserReducer.users)
+    const infoUser = useSelector(state => state.UserReducer.usersWithoutDate)
     const Messages = useSelector(state => state.MessagesReducer)
+
+   //  useEffect(()=> {
+   //   getInfo(setMessage,'chat')s
+   //      },[])
+   //
+   //  const [message,setMessage]=useState();
+   //
+   // if(message != null) dispatch(changeMess({message}))
+
 
 
     return (
