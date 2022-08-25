@@ -8,6 +8,7 @@ const Messages = () => {
     const infoUser = useSelector(state => state.UserReducer.users)
     const Messages = useSelector(state => state.MessagesReducer)
 
+
     return (
         <div className={MS.content}>
             {id? Messages[`${id}`].map(e =>  e.Me?
