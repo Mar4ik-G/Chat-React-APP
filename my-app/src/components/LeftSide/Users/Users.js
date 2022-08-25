@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import US from './UsersStyle.module.css'
 import {useDispatch, useSelector} from "react-redux";
-import {addId, sortArr,} from "../../../redux/reducers/UserReducer";
+import {addDate, addId, sortArr,} from "../../../redux/reducers/UserReducer";
 
 
 const Users = () => {
