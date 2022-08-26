@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import MS from './MessageStyle.module.css'
 import { useSelector} from "react-redux";
 

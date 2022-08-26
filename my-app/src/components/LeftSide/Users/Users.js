@@ -2,13 +2,12 @@ import React, {useEffect} from 'react';
 import US from './UsersStyle.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import { addId, sortArr,} from "../../../redux/reducers/UserReducer";
-import {setMessages} from "../../../redux/reducers/MessagesReducer";
 
 const Users = () => {
 
+    const dispatch = useDispatch();
     const indexof = useSelector(state => state.UserReducer.indexof)
     const Users = useSelector(state => state.UserReducer.users)
-    const dispatch = useDispatch();
     const Messages = useSelector(state => state.MessagesReducer)
 
     useEffect(()=>{
@@ -18,8 +17,6 @@ const Users = () => {
     let users = Users.filter(function(item,index,arr){
         return item.name.indexOf(`${indexof}`) !== -1
     })
-
-
 
     return (
         <div className={US.contacts}  >
