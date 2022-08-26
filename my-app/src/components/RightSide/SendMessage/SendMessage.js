@@ -1,18 +1,34 @@
 import React, {useState} from 'react';
 import SMStyle from "./SendMessage.module.css"
 import {useDispatch, useSelector} from "react-redux";
-import {addMessage} from "../../../redux/reducers/MessagesReducer";
+import {addMessage, setLocalStorage} from "../../../redux/reducers/MessagesReducer";
 import axios from "axios";
 import {addDate, sortArr} from "../../../redux/reducers/UserReducer";
 
 const SendMessage = () => {
 
     const id = useSelector(state => state.UserReducer.id)
+    const Messages = useSelector(state => state.MessagesReducer)
     const dispatch = useDispatch();
     const [value,setValue] = useState('');
 
+
     const handlerValue = (event) => {
       setValue(event.currentTarget.value)
+    }
+
+    const sendFunction = (Me) =>{
+        let time = new Date().toLocaleString('ua-Ua').slice(0,17);
+
+        if(Me === true){
+            dispatch(addMessage([{Me:true,text:value,date:time},id]))
+        }else{
+            dispatch(addMessage([{Me:false,text:response.data.value,date:time},id]))
+        }
+
+        dispatch(addDate({id,date:new Date().getTime()}))
+        dispatch(sortArr())
+        dispatch(setLocalStorage({id}))
     }
 
     const handlerEnter = (event) => {
@@ -21,6 +37,7 @@ const SendMessage = () => {
             dispatch(addMessage([{Me:true,text:value,date:time},id]))
             dispatch(addDate({id,date:new Date().getTime()}))
             dispatch(sortArr())
+            dispatch(setLocalStorage({id}))
             setValue('');
             event.currentTarget.value = '';
             axios.get('https://api.chucknorris.io/jokes/random')
@@ -30,10 +47,9 @@ const SendMessage = () => {
                         dispatch(addMessage([{Me:false,text:response.data.value,date:time},id]))
                         dispatch(addDate({id,date:new Date().getTime()}))
                         dispatch(sortArr())
+                        dispatch(setLocalStorage({id}))
                     },10000)
-                   
                 })
-
             dispatch(sortArr())
         }
     }

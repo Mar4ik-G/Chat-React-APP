@@ -23,15 +23,17 @@ const MessagesReducer =createSlice({
     reducers:{
         addMessage(state,action){
             state[action.payload[1]].push(action.payload[0])
-            // addInfo(state,'chat')
         },
-        // changeMess(state,action){
-        //     debugger
-        //     state = action.payload.message;
-        // }
-    }
+        setLocalStorage(state,action){
+            localStorage.removeItem(action.payload.id)
+            localStorage.setItem(action.payload.id,JSON.stringify(state[`${action.payload.id}`]))
+        },
+        setMessages(state,action){
+        state[`${action.payload}`] = JSON.parse(localStorage.getItem(action.payload))
+        }
 
+    }
 })
 
-export const {addMessage,changeMess} = MessagesReducer.actions
+export const {addMessage,setLocalStorage,setMessages} = MessagesReducer.actions
 export default MessagesReducer.reducer

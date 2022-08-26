@@ -58,12 +58,6 @@ import {createSlice} from "@reduxjs/toolkit";
          addId(state,action){
              state.id =  action.payload
          },
-         // addName(state,action){
-         //     state.name =  action.payload
-         // },
-         // findIndex(state){
-         //    state.searchIndex = state.users.indexOf(state.name)
-         // },
          addIndexOf(state,action){
              state.indexof = action.payload
          },
@@ -77,7 +71,6 @@ import {createSlice} from "@reduxjs/toolkit";
          }
      }
 })
-
 
 export default UserReducer.reducer
 export const {addId,addIndexOf,addDate,sortArr} = UserReducer.actions

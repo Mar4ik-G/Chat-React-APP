@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import US from './UsersStyle.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import { addId, sortArr,} from "../../../redux/reducers/UserReducer";
-
+import {setMessages} from "../../../redux/reducers/MessagesReducer";
 
 const Users = () => {
 
@@ -13,13 +13,18 @@ const Users = () => {
 
     useEffect(()=>{
         dispatch(sortArr())
-    })
+    },[])
+
+    // useEffect(()=> {
+    //     if( id !== null){
+    //
+    //     }
+    // },[])
 
 
     let users = Users.filter(function(item,index,arr){
         return item.name.indexOf(`${indexof}`) !== -1
     })
-
 
     return (
         <div className={US.contacts}  >
@@ -28,6 +33,7 @@ const Users = () => {
                 {users.map(e =>
                     <div className={US.usersList} key={e.id} onClick={() => {
                         dispatch(addId(e.id))
+                        dispatch(setMessages(e.id))
                     }}>
                         <div className={US.person}>
                             <img className={US.photo} src={e.img} alt="user" />
