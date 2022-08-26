@@ -58,6 +58,9 @@ import {createSlice} from "@reduxjs/toolkit";
          addId(state,action){
              state.id =  action.payload
          },
+         addUsers(state,action){
+             state.users = action.payload
+         },
          addIndexOf(state,action){
              state.indexof = action.payload
          },
@@ -66,11 +69,11 @@ import {createSlice} from "@reduxjs/toolkit";
          },
          sortArr(state){
              state.users.sort(function(a,b){
-                 return (b.date) - (a.date);
+                 return b.date - a.date;
              });
          }
      }
 })
 
 export default UserReducer.reducer
-export const {addId,addIndexOf,addDate,sortArr} = UserReducer.actions
+export const {addId,addIndexOf,addDate,sortArr,addUsers} = UserReducer.actions

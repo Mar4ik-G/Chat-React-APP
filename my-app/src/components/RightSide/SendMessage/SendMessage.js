@@ -8,10 +8,9 @@ import {addDate, sortArr} from "../../../redux/reducers/UserReducer";
 const SendMessage = () => {
 
     const id = useSelector(state => state.UserReducer.id)
-    const Messages = useSelector(state => state.MessagesReducer)
+    const users = useSelector(state => state.UserReducer.users)
     const dispatch = useDispatch();
     const [value,setValue] = useState('');
-
 
     const handlerValue = (event) => {
       setValue(event.currentTarget.value)
@@ -19,16 +18,15 @@ const SendMessage = () => {
 
     const sendFunction = (Me,response) =>{
         let time = new Date().toLocaleString('ua-Ua').slice(0,17);
-
         if(Me === true){
             dispatch(addMessage([{Me:true,text:value,date:time},id]))
         }else{
             dispatch(addMessage([{Me:false,text:response.data.value,date:time},id]))
         }
-
         dispatch(addDate({id,date:new Date().getTime()}))
         dispatch(sortArr())
         dispatch(setLocalStorage({id}))
+        localStorage.setItem('users',JSON.stringify(users))
     }
 
     const handlerEnter = (event) => {

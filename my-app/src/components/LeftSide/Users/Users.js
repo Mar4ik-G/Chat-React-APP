@@ -15,16 +15,11 @@ const Users = () => {
         dispatch(sortArr())
     },[])
 
-    // useEffect(()=> {
-    //     if( id !== null){
-    //
-    //     }
-    // },[])
-
-
     let users = Users.filter(function(item,index,arr){
         return item.name.indexOf(`${indexof}`) !== -1
     })
+
+
 
     return (
         <div className={US.contacts}  >
@@ -33,17 +28,16 @@ const Users = () => {
                 {users.map(e =>
                     <div className={US.usersList} key={e.id} onClick={() => {
                         dispatch(addId(e.id))
-                        dispatch(setMessages(e.id))
                     }}>
                         <div className={US.person}>
                             <img className={US.photo} src={e.img} alt="user" />
                             <div>
                                 <h4  className={US.name}>{e.name}</h4>
-                                <p className={US.lastMessage}>{Messages[`${e.id}`].slice(-1)[0].text}</p>
+                                <p className={US.lastMessage}>{Messages[`${e.id}`]? Messages[`${e.id}`].slice(-1)[0].text:null}</p>
                             </div>
 
                         </div>
-                        <p className={US.data}>{Messages[`${e.id}`].slice(-1)[0].date.slice(0,10)}</p>
+                        <p className={US.data}>{Messages[`${e.id}`]? Messages[`${e.id}`].slice(-1)[0].date.slice(0,10) : null}</p>
                     </div>)}
 
             </div>
