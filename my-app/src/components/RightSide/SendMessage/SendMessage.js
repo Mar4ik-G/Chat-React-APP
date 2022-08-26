@@ -17,7 +17,7 @@ const SendMessage = () => {
       setValue(event.currentTarget.value)
     }
 
-    const sendFunction = (Me) =>{
+    const sendFunction = (Me,response) =>{
         let time = new Date().toLocaleString('ua-Ua').slice(0,17);
 
         if(Me === true){
@@ -33,21 +33,13 @@ const SendMessage = () => {
 
     const handlerEnter = (event) => {
         if (event.which === 13 || event.keyCode === 13) {
-          let time = new Date().toLocaleString('ua-Ua').slice(0,17);
-            dispatch(addMessage([{Me:true,text:value,date:time},id]))
-            dispatch(addDate({id,date:new Date().getTime()}))
-            dispatch(sortArr())
-            dispatch(setLocalStorage({id}))
+          sendFunction(true,null)
             setValue('');
             event.currentTarget.value = '';
             axios.get('https://api.chucknorris.io/jokes/random')
                 .then(response => {
                     setTimeout(() => {
-                        let time = new Date().toLocaleString('ua-Ua').slice(0,17);
-                        dispatch(addMessage([{Me:false,text:response.data.value,date:time},id]))
-                        dispatch(addDate({id,date:new Date().getTime()}))
-                        dispatch(sortArr())
-                        dispatch(setLocalStorage({id}))
+                      sendFunction(false,response)
                     },10000)
                 })
             dispatch(sortArr())
