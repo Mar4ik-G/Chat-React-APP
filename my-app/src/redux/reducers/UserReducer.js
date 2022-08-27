@@ -8,7 +8,7 @@ import {createSlice} from "@reduxjs/toolkit";
         usersWithoutDate: [
             {
                 id:1,
-                img:'https://cdn.maximonline.ru/28/f8/71/28f871cd2aefb92c8c41e108797cde7b/728x728_1_9be45a93039fc399f9055684f9d08baa@1024x1024_0xac120002_10429326581550233820.jpg',
+                img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRR9TH0Yr1jksLxAOP5I5sd-Qr0wc0xxLLwOXPPy4wUFhlHdCkbVuXU2fcvQfCnRcoiSA&usqp=CAU',
                 name:'Alice Freeman',
             },
             {
@@ -18,7 +18,7 @@ import {createSlice} from "@reduxjs/toolkit";
             },
             {
                 id:3,
-                img:'https://rugraphics.ru/wp-content/uploads/licza-lyudej.png',
+                img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqf5WTMP0g-LMgTsQxdHyvI8LNrbKCXLpoC-E8pGyjCFWM2P8hkqYkKL0Qh2rvux22QAY&usqp=CAU',
                 name:'Velazquez',
             },
             {
@@ -30,7 +30,7 @@ import {createSlice} from "@reduxjs/toolkit";
         users: [
             {
                 id:1,
-                img:'https://cdn.maximonline.ru/28/f8/71/28f871cd2aefb92c8c41e108797cde7b/728x728_1_9be45a93039fc399f9055684f9d08baa@1024x1024_0xac120002_10429326581550233820.jpg',
+                img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRR9TH0Yr1jksLxAOP5I5sd-Qr0wc0xxLLwOXPPy4wUFhlHdCkbVuXU2fcvQfCnRcoiSA&usqp=CAU',
                 name:'Alice Freeman',
                 date:1661450220764,
             },
@@ -42,7 +42,7 @@ import {createSlice} from "@reduxjs/toolkit";
             },
             {
                 id:3,
-                img:'https://rugraphics.ru/wp-content/uploads/licza-lyudej.png',
+                img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqf5WTMP0g-LMgTsQxdHyvI8LNrbKCXLpoC-E8pGyjCFWM2P8hkqYkKL0Qh2rvux22QAY&usqp=CAU',
                 name:'Velazquez',
                 date:1661450220764,
             },
